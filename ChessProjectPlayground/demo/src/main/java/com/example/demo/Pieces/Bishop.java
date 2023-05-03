@@ -8,6 +8,7 @@ public class Bishop extends Pieces {
         return super.isMoveValid(posY, posX, newPosY, newPosX) && isBishopMovement(posY, posX, newPosY, newPosX) && isSomethingInTheWay(posY, posX, newPosY, newPosX, board);
     }
 
+
     private boolean isBishopMovement(int posY, int posX, int newPosY, int newPosX) {
         return Math.abs(newPosX-posX) == Math.abs(newPosY-posY);
     }

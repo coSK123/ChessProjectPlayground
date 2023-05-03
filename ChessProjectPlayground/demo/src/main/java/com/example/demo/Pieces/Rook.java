@@ -27,7 +27,7 @@ public class Rook extends Pieces{
                 return false;
             }
             else{
-                System.out.println("testing"+ input);
+                System.out.println("testing"+ i);
             }
         }
         System.out.println("All tests successful");

@@ -6,6 +6,6 @@ public class Knight extends Pieces {
     }
 
     public boolean isKnightMovement(int posY, int posX, int newPosY, int newPosX){
-            return (Math.abs(posY-newPosY) == 1 && Math.abs(posX-newPosX)== 1)||(Math.abs(posY-newPosY) == 2 && Math.abs(posX-newPosX) == 1);
+            return (Math.abs(posY-newPosY) == 1 && Math.abs(posX-newPosX)== 2)||(Math.abs(posY-newPosY) == 2 && Math.abs(posX-newPosX) == 1);
     }
 }
