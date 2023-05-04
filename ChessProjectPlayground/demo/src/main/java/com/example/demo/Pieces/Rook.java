@@ -14,7 +14,7 @@ public class Rook extends Pieces{
     public boolean isMoveValid(int posY, int posX, int newPosY, int newPosX){
         return super.isMoveValid(posY,posX,newPosY,newPosX) && isRookMovement( posY, posX,  newPosY,  newPosX) ;
     }
-    public boolean isRookMovement(int posY, int posX, int newPosY, int newPosX){
+    private boolean isRookMovement(int posY, int posX, int newPosY, int newPosX){
         return (posY == newPosY && posX != newPosX) || (posY != newPosY && posX == newPosX);
     }
 
