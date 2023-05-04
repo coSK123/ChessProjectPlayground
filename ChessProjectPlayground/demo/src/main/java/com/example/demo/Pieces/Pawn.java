@@ -68,5 +68,10 @@ public class Pawn extends Pieces {
         return false;
     }
 
+    @Override
+    public Character toChar() {
+        return getIsBlack() ? 'p' : 'P';
+    }
+
 
 }

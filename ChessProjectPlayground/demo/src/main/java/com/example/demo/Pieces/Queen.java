@@ -14,4 +14,9 @@ public class Queen extends Pieces{
         return (Math.abs(newPosX-posX) == Math.abs(newPosY-posY) )||
                 ((posY == newPosY && posX != newPosX) || (posY != newPosY && posX == newPosX));
     }
+
+    @Override
+    public Character toChar() {
+        return getIsBlack() ? 'q' : 'Q';
+    }
 }

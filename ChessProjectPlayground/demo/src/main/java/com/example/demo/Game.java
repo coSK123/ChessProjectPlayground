@@ -29,18 +29,13 @@ public class Game {
         this.board = board;
     }
 
-    public void boardStarter(){
-       Pieces[][] newBoard = new Pieces[8][8];
-       newBoard[0][4] = new King( true);
-
-
-       board.setBoard(newBoard);
-
-
+    public void boardStarter() {
    }
 
 
     public static void main(String[] args) {
+        Game game = new Game();
+        System.out.println(game.board.getBoard()[0][0].getIsBlack());
     }
 
 }

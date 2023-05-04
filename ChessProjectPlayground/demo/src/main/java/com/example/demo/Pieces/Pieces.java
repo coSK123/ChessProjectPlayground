@@ -1,8 +1,11 @@
 package com.example.demo.Pieces;
 
 public class Pieces {
-
     private boolean isBlack;
+
+    public Pieces(boolean black) {
+        isBlack = black;
+    }
 
     public boolean getIsBlack() {
         return isBlack;
@@ -16,6 +19,10 @@ public class Pieces {
     public boolean isMoveValid(int posY, int posX, int newPosY, int newPosX){
         return newPosY <8 && newPosX <8 && !(newPosX == posX && newPosY == posY);
 
+    }
+
+    public Character toChar() {
+        return null;
     }
 
 

@@ -4,6 +4,8 @@ import com.example.demo.Pieces.Bishop;
 import com.example.demo.Pieces.King;
 import com.example.demo.Pieces.Queen;
 import com.example.demo.Pieces.Rook;
+import static java.lang.Character.isUpperCase;
+
 
 public class Main {
     public static void main(String[] args) {

@@ -4,6 +4,10 @@ import com.example.demo.Board;
 
 public class Bishop extends Pieces {
 
+    public Bishop(boolean black) {
+        super(black);
+    }
+
     public boolean isMoveValid(int posY, int posX, int newPosY, int newPosX, Board board) {
         return super.isMoveValid(posY, posX, newPosY, newPosX) && isBishopMovement(posY, posX, newPosY, newPosX) && isSomethingInTheWay(posY, posX, newPosY, newPosX, board);
     }
@@ -23,6 +27,11 @@ public class Bishop extends Pieces {
             } else return false;
         }
         return true;
+    }
+
+    @Override
+    public Character toChar() {
+        return getIsBlack() ? 'b' : 'B';
     }
 
 

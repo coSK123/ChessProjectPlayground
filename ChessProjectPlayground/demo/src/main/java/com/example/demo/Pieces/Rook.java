@@ -18,6 +18,14 @@ public class Rook extends Pieces{
         return (posY == newPosY && posX != newPosX) || (posY != newPosY && posX == newPosX);
     }
 
+    public boolean getHasMoved() {
+        return hasMoved;
+    }
+
+    public void setHasMoved(boolean hasMoved) {
+        this.hasMoved = hasMoved;
+    }
+
     public boolean testRookMovement() {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
@@ -40,6 +48,11 @@ public class Rook extends Pieces{
         }
         System.out.println("All tests successful");
         return true;
+    }
+
+    @Override
+    public Character toChar() {
+        return getIsBlack() ? 'r' : 'R';
     }
 
     public static void main(String[] args) {

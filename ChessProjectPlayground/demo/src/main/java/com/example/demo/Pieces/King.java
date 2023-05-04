@@ -24,9 +24,25 @@ public class King extends Pieces{
         return board.isEmpty(newPosY,newPosX);
     }
 
-    private boolean isCastleValid(int posY, int posX, int newPosY, int newPosX, Board board) {
+    public boolean isCastleValid(int posY, int posX, int newPosX, Board board) {
+        // todo !!!!!!!!!
+        if (newPosX-posX > 0 && canCastleK) {
+            //kingside
+            if (board.getBoard()[posY][7] instanceof Rook && !((Rook) board.getBoard()[posY][7]).getHasMoved() && board.isEmpty(posY, posX+1) && board.isEmpty(posY, posX+2)
+                    && !isChecked(posY, posX+1, board, getIsBlack()) && !isChecked(posY, posX+2, board, getIsBlack())) {
+                return true;
+                //move rook
+            }
+        } else if (newPosX-posX < 0 && canCastleQ){
+            if (board.getBoard()[posY][0] instanceof Rook && !((Rook) board.getBoard()[posY][0]).getHasMoved() &&board.isEmpty(posY, posX-1) && board.isEmpty(posY, posX-2)
+                    && !isChecked(posY, posX-1, board, getIsBlack()) && !isChecked(posY, posX-2, board, getIsBlack())) {
+                return true;
+                //move rook
+            }
+            //queenside
+        }
         //todo ( newPosX-posX > 0 ? canCastleK : canCastleQ)
-        return true;
+        return false;
     }
 
     public boolean isChecked(int posY, int posX, Board board, boolean isBlack){
