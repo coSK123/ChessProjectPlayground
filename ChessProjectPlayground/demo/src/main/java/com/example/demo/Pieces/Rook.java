@@ -3,6 +3,14 @@ package com.example.demo.Pieces;
 import java.util.Scanner;
 
 public class Rook extends Pieces{
+
+    private boolean hasMoved;
+
+    public Rook(boolean black) {
+        super(black);
+        hasMoved = false;
+    }
+
     public boolean isMoveValid(int posY, int posX, int newPosY, int newPosX){
         return super.isMoveValid(posY,posX,newPosY,newPosX) && isRookMovement( posY, posX,  newPosY,  newPosX) ;
     }

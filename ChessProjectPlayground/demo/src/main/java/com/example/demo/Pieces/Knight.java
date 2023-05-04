@@ -1,6 +1,10 @@
 package com.example.demo.Pieces;
 
 public class Knight extends Pieces {
+    public Knight(boolean black) {
+        super(black);
+    }
+
     public boolean isMoveValid(int posY, int posX, int newPosY, int newPosX) {
     return super.isMoveValid(posY, posX, newPosY, newPosX) && isKnightMovement(posY,posX,newPosY,newPosX);
     }

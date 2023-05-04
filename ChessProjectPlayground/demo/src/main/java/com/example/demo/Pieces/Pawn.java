@@ -4,6 +4,10 @@ import com.example.demo.Board;
 
 public class Pawn extends Pieces {
 
+    public Pawn(boolean black) {
+        super(black);
+    }
+
     public boolean isMoveValid(int posY, int posX, int newPosY, int newPosX, Board board) {
          return super.isMoveValid(posY, posX, newPosY, newPosX) && isPawnMovement(posY, posX, newPosY, newPosX, board);
 

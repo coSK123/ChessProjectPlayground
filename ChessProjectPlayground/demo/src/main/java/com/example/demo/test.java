@@ -6,7 +6,7 @@ public class test {
 
 
     public static void test(){
-        Rook rook = new Rook();
+        Rook rook = new Rook(true);
         rook.testRookMovement();
     }
 
